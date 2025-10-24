@@ -1,6 +1,6 @@
-# 🧠 Stock Price Prediction — Random Forest Model
+#  Stock Price Prediction — Random Forest Model
 
-## 📘 Overview
+##  Overview
 
 This project predicts the **next 5 days of stock prices** for selected Indian companies (such as **HDFCBANK**, **ICICIBANK**, and **BHARTIARTL**) using a **Random Forest Regressor** trained on historical market data.
 
@@ -12,7 +12,7 @@ It includes:
 * **5-day future price forecasting**
 
 
-## ⚙️ Requirements
+## Requirements
 
 Install all dependencies before running the notebook:
 
@@ -22,9 +22,9 @@ pip install pandas numpy scikit-learn matplotlib seaborn yfinance joblib
 
 ---
 
-## 🚀 Workflow
+##  Workflow
 
-### 1️⃣ Data Collection
+### 1️. Data Collection
 
 Historical data is collected from Yahoo Finance using *yfinance*:
 
@@ -42,7 +42,7 @@ indian_stocks.csv
 
 ---
 
-### 2️⃣ Feature Engineering
+### 2️. Feature Engineering
 
 Features created:
 
@@ -53,7 +53,7 @@ Features created:
 
 ---
 
-### 3️⃣ Model Training
+### 3️. Model Training
 
 The **Random Forest Regressor** is trained as follows:
 
@@ -67,7 +67,7 @@ model = RandomForestRegressor(
     max_depth=12
 )
 model.fit(X_train_scaled, y_train)
-print("✅ Model training complete.")
+print(" Model training complete.")
 ```
 
 The trained model, scaler, and label encoder are saved as:
@@ -80,7 +80,7 @@ model/stock_label_encoder.pkl
 
 ---
 
-### 4️⃣ Model Evaluation
+### 4️. Model Evaluation
 
 Performance metrics:
 
@@ -95,7 +95,7 @@ print(f"Model Accuracy: {r2 * 100:.2f}%")
 
 ---
 
-### 5️⃣ Forecasting
+### 5️. Forecasting
 
 Predicts the next **5 days** of closing prices for each stock:
 
@@ -109,7 +109,7 @@ Example output (saved in `indian_stock_forecast_5day.csv`):
 
 ---
 
-### 📊 Visualization
+###  Visualization
 
 Visualize the actual vs predicted stock prices:
 
@@ -120,7 +120,7 @@ plt.figure(figsize=(10,5))
 plt.plot(y_test.values, label='Actual')
 plt.plot(y_pred, label='Predicted', alpha=0.7)
 plt.legend()
-plt.title("📈 Actual vs Predicted Stock Prices")
+plt.title(" Actual vs Predicted Stock Prices")
 plt.xlabel("Samples")
 plt.ylabel("Close Price")
 plt.show()
@@ -128,7 +128,7 @@ plt.show()
 
 ---
 
-## 💡 Future Improvements
+##  Future Improvements
 
 * Add **technical indicators** (RSI, MACD, Bollinger Bands)
 * Try **LSTM/GRU models** for time-series forecasting
