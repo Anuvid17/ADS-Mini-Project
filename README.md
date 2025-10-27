@@ -1,6 +1,6 @@
-# 📈 Stock Price Prediction — Random Forest Model  
+#  Stock Price Prediction — Random Forest Model  
 
-## 🧠 Overview  
+##  Overview  
 
 This project predicts the **next 5 days of stock prices** for selected Indian companies (such as **HDFCBANK**, **ICICIBANK**, and **BHARTIARTL**) using a **Random Forest Regressor** trained on historical stock market data.  
 
@@ -17,7 +17,7 @@ The complete workflow includes:
 
 ---
 
-## ⚙️ Requirements  
+##  Requirements  
 
 Install all dependencies before running the notebook or the app:  
 
@@ -27,9 +27,9 @@ pip install pandas numpy scikit-learn matplotlib seaborn yfinance joblib streaml
 
 ---
 
-## 🧩 Workflow
+##  Workflow
 
-### 1️⃣ Data Collection
+### 1️. Data Collection
 
 Historical data is collected from **Yahoo Finance** using *yfinance*:
 
@@ -47,7 +47,7 @@ indian_stocks.csv
 
 ---
 
-### 2️⃣ Feature Engineering
+### 2️. Feature Engineering
 
 Engineered features include both lag-based and rolling statistics to capture market patterns:
 
@@ -62,7 +62,7 @@ Engineered features include both lag-based and rolling statistics to capture mar
 
 ---
 
-### 3️⃣ Model Training
+### 3️. Model Training
 
 The **Random Forest Regressor** was chosen for its ability to handle nonlinear relationships and feature interactions effectively.
 
@@ -89,7 +89,7 @@ models/stock_label_encoder.pkl
 
 ---
 
-### 4️⃣ Model Evaluation
+### 4️. Model Evaluation
 
 Performance metrics on the test set:
 
@@ -108,7 +108,7 @@ print(f"Model Accuracy: {r2 * 100:.2f}%")
 
 ---
 
-### 5️⃣ Forecasting
+### 5️. Forecasting
 
 The trained model predicts the **next 5 days of closing prices** for each selected stock.
 
@@ -122,7 +122,7 @@ Example Output (`indian_stock_forecast_5day.csv`):
 
 ---
 
-### 6️⃣ Visualization
+### 6️. Visualization
 
 Actual vs Predicted Price Comparison:
 
@@ -141,7 +141,7 @@ plt.show()
 
 ---
 
-## 🌐 Streamlit Deployment
+##  Streamlit Deployment
 
 The trained model is integrated into a **Streamlit web app** for real-time user interaction.
 
@@ -165,14 +165,14 @@ streamlit run app.py
 User Input → Data Preprocessing → Model Prediction → Visualization
 ```
 
-### 🌍 Live Demo:
+###  Live Demo:
 
 👉 Visit the deployed app here:
 [**Stock Predictive Analysis — Streamlit App**](https://stock-predictive-analysis.streamlit.app/)
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 * Integrate **technical indicators** (RSI, MACD, Bollinger Bands) for better market context
 * Experiment with **LSTM/GRU models** for sequential learning
@@ -181,7 +181,7 @@ User Input → Data Preprocessing → Model Prediction → Visualization
 
 ---
 
-## 🧾 References
+##  References
 
 1. Yahoo Finance API Documentation — *yfinance* Python Library
 2. Scikit-learn Official Documentation (RandomForestRegressor)
